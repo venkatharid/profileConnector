@@ -70,6 +70,9 @@ img {
   color: var(--primary-color);
 }
 
+.text-danger {
+  color: var(--danger-color);
+}
 .text-dark {
   color: var(--dark-color);
 }
@@ -118,6 +121,7 @@ img {
 }
 .my-1 {
   margin: 1rem 0;
+  white-space: pre-wrap;
 }
 .my-2 {
   margin: 2rem 0;
@@ -573,5 +577,11 @@ button {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+}
+
+@media (orientation: portrait) {
+  .navbar i{
+    display: none;
   }
 }
