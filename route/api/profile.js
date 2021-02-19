@@ -201,7 +201,7 @@ router.put('/experience', [auth,
 
 //delete profilr experience :/exp_id
 
-router.delete('/experence/:exp_id', auth, async (req , res)=>{
+router.delete('/experience/:exp_id', auth, async (req , res)=>{
     try {
         
         const profile = await Profile.findOne({user: req.user.id});
@@ -222,7 +222,7 @@ router.delete('/experence/:exp_id', auth, async (req , res)=>{
 
 router.put('/education', [auth,
     check('school', 'school is required').not().isEmpty(),
-    check('deegree', 'deegree is required').not().isEmpty(),
+    check('degree', 'degree is required').not().isEmpty(),
     check('fieldofstudy', 'fieldofstudy is required').not().isEmpty(),
     check('from', 'from date is required').not().isEmpty()
 
@@ -235,7 +235,7 @@ router.put('/education', [auth,
 
     const {
         school,
-        deegree,
+        degree,
         fieldofstudy,
         from,
         to,
@@ -245,7 +245,7 @@ router.put('/education', [auth,
 
     const newEducaction = {
         school,
-        deegree,
+        degree,
         fieldofstudy,
         from,
         to,
